@@ -1,7 +1,11 @@
+import Rating from "./components/Rating"
+
 function App() {
 
   return (
-    <h1>Hi there</h1>
+    <div>
+      <Rating />
+    </div>
   )
 }
 

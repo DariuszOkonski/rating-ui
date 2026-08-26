@@ -1,6 +1,8 @@
 const Rating = () => {
   return (
-    <div>Rate Your Experience</div>
+    <div className="rating-container">
+      <h2 >Rate Your Experience</h2>
+    </div>
   )
 }
 

@@ -27,7 +27,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 10px;
-  font-size: 2rem;
+  font-size: 3rem;
   cursor: pointer;
   margin: 15px;
 }

@@ -3,7 +3,7 @@ import { useState } from "react";
 const stars = Array.from({ length: 5 }, (_, i) => i + 1);
 const feedbackMessages = ["Terrible", "Poor", "Fair", "Good", "Excellent"];
 
-const Rating = ({ heading }) => {
+const Rating = ({ heading = "Rate Your Experience", color = "gold" }) => {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
 
@@ -17,7 +17,8 @@ const Rating = ({ heading }) => {
             key={star}
             onMouseEnter={() => setHover(star)}
             onMouseLeave={() => setHover(0)}
-            className={`star ${star <= (hover || rating) ? "active" : ""}`}
+            className="star"
+            style={{ color: star <= (hover || rating) ? color : "#ccc" }}
           >
             {"\u2605"}
           </span>

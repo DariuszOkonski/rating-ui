@@ -22,8 +22,9 @@ const Rating = ({
             rating={rating}
             hover={hover}
             color={color}
-            onSetRating={setRating}
-            onSetHover={setHover}
+            ratingClick={setRating}
+            hoverEnter={setHover}
+            hoverLeave={() => setHover(0)}
           />
         ))}
       </div>

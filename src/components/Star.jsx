@@ -1,10 +1,18 @@
-const Star = ({ star, color, hover, rating, onSetRating, onSetHover }) => {
+const Star = ({
+  star,
+  color,
+  hover,
+  rating,
+  ratingClick,
+  hoverEnter,
+  hoverLeave,
+}) => {
   return (
     <span
-      onClick={() => onSetRating(star)}
+      onClick={() => ratingClick(star)}
       key={star}
-      onMouseEnter={() => onSetHover(star)}
-      onMouseLeave={() => onSetHover(0)}
+      onMouseEnter={() => hoverEnter(star)}
+      onMouseLeave={hoverLeave}
       className="star"
       style={{ color: star <= (hover || rating) ? color : "#ccc" }}
     >

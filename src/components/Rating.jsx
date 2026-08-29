@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Star from "./Star";
 
 const stars = Array.from({ length: 5 }, (_, i) => i + 1);
 
@@ -15,16 +16,15 @@ const Rating = ({
       <h2>{heading}</h2>
       <div className="stars">
         {stars.map((star) => (
-          <span
-            onClick={() => setRating(star)}
+          <Star
             key={star}
-            onMouseEnter={() => setHover(star)}
-            onMouseLeave={() => setHover(0)}
-            className="star"
-            style={{ color: star <= (hover || rating) ? color : "#ccc" }}
-          >
-            {"\u2605"}
-          </span>
+            star={star}
+            color={color}
+            hover={hover}
+            rating={rating}
+            onSetRating={setRating}
+            onSetHover={setHover}
+          />
         ))}
       </div>
       {rating > 0 && <p className="feedback">{feedbackMessages[rating - 1]}</p>}

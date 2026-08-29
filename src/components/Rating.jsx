@@ -19,9 +19,9 @@ const Rating = ({
           <Star
             key={star}
             star={star}
-            color={color}
-            hover={hover}
             rating={rating}
+            hover={hover}
+            color={color}
             onSetRating={setRating}
             onSetHover={setHover}
           />
